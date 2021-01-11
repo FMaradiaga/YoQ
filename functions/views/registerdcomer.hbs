@@ -1,0 +1,210 @@
+{{>header}}
+<div class="main">
+    <div class="section">
+        <div class="main">
+            <div class="row">
+                <div class=" col s12 m12">
+                    <div class="">
+                        <a href="/dash" class="teal-text">Inicio ></a>
+                        <a href="/registercomer" class="teal-text">Agregar ></a>
+                        <b href="#!" class="teal-text"><b>Registro</b></a></div>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col s12 m12">
+                    <div class="card">
+                        <div class="card-content white-text">
+                            <!-- HORIZONTAL STEPPER -->
+                            <div class="col-md-12">
+                                <div class="mdl-card__supporting-text">
+                                    <div class="mdl-stepper-horizontal-alternative">
+                                        <div id="stepper1" class="mdl-stepper-step active-step editable-step">
+                                            <div class="mdl-stepper-circle"><span>1</span></div>
+                                            <div class="mdl-stepper-title">Establecimiento</div>
+                                            <div class="mdl-stepper-optional">Datos Generales </div>
+                                            <div class="mdl-stepper-bar-left"></div>
+                                            <div class="mdl-stepper-bar-right"></div>
+                                        </div>
+                                        <div id="stepper2" class="mdl-stepper-step">
+                                            <div class="mdl-stepper-circle"><span>2</span></div>
+                                            <div class="mdl-stepper-title">Ubicación</div>
+
+                                            <div class="mdl-stepper-bar-left"></div>
+                                            <div class="mdl-stepper-bar-right"></div>
+                                        </div>
+                                        <div id="stepper3" class="mdl-stepper-step">
+                                            <div class="mdl-stepper-circle"><span>3</span></div>
+                                            <div class="mdl-stepper-title">Propietario</div>
+                                            <div class="mdl-stepper-bar-left"></div>
+                                            <div class="mdl-stepper-bar-right"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end HORIZONTAL STEPPER -->
+
+                            <!-- STEPS -->
+                            <div class="stepper">
+                                <div id="step1" class="step">
+                                    <div class="row">
+                                        <form class="col s12">
+                                            <div class="row">
+                                                <div class="input-field col s6">
+                                                    <input placeholder="Nombre" id="com_sname" type="text"
+                                                        class="validate">
+                                                    <label for="com_sname">Nombre</label>
+                                                </div>
+                                                <div class="input-field col s3">
+                                                    <input id="com_iemployee" type="text" class="validate">
+                                                    <label for="com_iemployee">Numero Empleados</label>
+                                                </div>
+                                                <div class="input-field col s3">
+                                                    <select id="com_sdepto" class="browser-default">
+                                                        <option value="">Seleccione Categoría<a href=""></a></option>
+                                                        <option value="1">Option 1</option>
+                                                        <option value="2">Option 2</option>
+                                                        <option value="3">Option 3</option>
+                                                    </select>
+                                                </div>
+                                                <div class="input-field col s4">
+                                                    <input placeholder="2773-14-32" id="com_sphone" type="text"
+                                                        class="validate">
+                                                    <label for="com_sphone">Teléfono</label>
+                                                </div>
+                                                <div class="input-field col s4">
+                                                    <input placeholder="504-12345678" id="com_sphone" type="text" class="validate">
+                                                    <label for="com_sphone">Celular</label>
+                                                </div>
+                                                <div class="input-field col s4">
+                                                    <input id="com_semail" type="email" class="validate">
+                                                    <label for="com_semail">Correo</label>
+                                                </div>
+                                                <div class="input-field col s4">
+                                                    <input placeholder="www.ejemplo.com" id="com_sphone" type="text" class="validate">
+                                                    <label for="com_sphone">Pagina WEB</label>
+                                                </div>
+                                                <div class="input-field col s2">
+                                                    <label>
+                                                        <input type="checkbox" />
+                                                        <span>Facebook</span>
+                                                    </label>
+                                                </div>
+                                                <div class="input-field col s2">
+                                                    <label>
+                                                        <input type="checkbox" />
+                                                        <span>Instagram</span>
+                                                    </label>
+                                                </div>
+                                               
+                                                <div class="input-field col s2">
+                                                    <label>
+                                                        <input type="checkbox" />
+                                                        <span>Productos</span>
+                                                    </label>
+                                                </div>
+                                                <div class="input-field col s2">
+                                                    <label>
+                                                        <input type="checkbox" />
+                                                        <span>Servicios</span>
+                                                    </label>
+                                                </div>
+
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <a id="next1" class="waves-effect waves-light btn"><i
+                                            class="material-icons right">keyboard_arrow_right</i>SIGUIENTE</a>
+
+                                </div>  
+                                <div id="step2" class="step hide">
+                                    <div class="row">
+                                        <div class="col s6">
+                                            <div class="input-field col s4">
+                                                <select id="com_sdepto" class="browser-default">
+                                                    <option value="">Seleccione Departamento</option>
+                                                    <option selected value="1">Comayagua</option>
+                                                </select>
+                                            </div>
+                                            <div class="input-field col s4">
+                                                <select id="com_sdepto" class="browser-default">
+                                                    <option value="">Seleccione Ciudad</option>
+                                                    <option selected value="1">Siguatepeque</option>
+                                                </select>
+                                            </div>
+                                            <div class="input-field col s4">
+                                                <select id="com_sdepto" class="browser-default">
+                                                    <option value="">Seleccione Barrio</option>
+                                                    <option value="1">Option 1</option>
+                                                    <option value="2">Option 2</option>
+                                                    <option value="3">Option 3</option>
+                                                </select>
+                                            </div>
+                                            <div class="input-field col s4">
+                                                <select id="com_sdepto" class="browser-default">
+                                                    <option value="">Urbano/Rural</option>
+                                                    <option value="1">Urbano</option>
+                                                    <option value="2">Rural</option>
+                                                </select>
+                                            </div>
+                                            <div class="input-field col s4">
+                                                <input disabled id="com_iemployee" type="text" class="validate">
+                                                <label for="com_iemployee">Coordenadas</label>
+                                            </div>
+                                            <div class="input-field col s12">
+                                                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                                <label for="textarea1">Dirección</label>
+                                            </div>
+                                        </div>
+                                        <div class="col s6">
+                                            <div class="col s12"
+                                                style="background-color: grey; width:100%; height: 400px;"></div>
+                                        </div>
+
+
+                                    </div>
+                                    <a id="previous2" class="waves-effect waves-light btn"><i
+                                            class="material-icons left">keyboard_arrow_left</i>ANTERIOR</a>
+                                    <a id="next2" class="waves-effect waves-light btn"><i
+                                            class="material-icons right">keyboard_arrow_right</i>SIGUIENTE</a>
+                                </div>
+                                <div id="step3" class="step hide">
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <label>Observaciones</label>
+                                            <input type="text" class="validate">
+                                        </div>
+                                        <div class="input-field col s6">
+                                            <div class="chips chips-placeholder"></div>
+
+                                        </div>
+                                        <div class="input-field col s6">
+                                            <label>
+                                                <input type="checkbox" />
+                                                <span>Recibir notificacion.</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="file-field input-field">
+                                        <div class="btn">
+                                            <span>Foto</span>
+                                            <input type="file" multiple>
+                                        </div>
+                                        <div class="file-path-wrapper">
+                                            <input class="file-path validate" type="text"
+                                                placeholder="Cargar Foto del Negocio">
+                                        </div>
+                                    </div>
+                                    <a id="previous3" class="waves-effect waves-light btn"><i
+                                            class="material-icons left">keyboard_arrow_left</i>ANTERIOR</a>
+                                    <a id="finish" class="waves-effect waves-light btn"><i
+                                            class="material-icons right">done_all</i>VALIDAR</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>

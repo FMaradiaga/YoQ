@@ -1,0 +1,61 @@
+{{>header}}
+<div class="main">
+    <div class="section">
+        <div class="row">
+            <div class=" col s12 m12">
+                <div class="">
+                    <a href="/dash" class="teal-text">Inicio ></a>
+                    <b href="#!" class="teal-text"><b>Buscar Usuario</b></a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+
+                <div class="col s12 m12">
+                    <div class="card blue-grey darken-1">
+                        <div class="center col s12">  
+                            <div class="input-field col s10">
+                                <input style="text-align: center;" placeholder="Nombre del Usuario" id="com_sname" type="text"
+                                    class="validate">
+                            </div>
+                            <div class="input-field col s2">
+                                <button class="waves-effect waves-light btn">Buscar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 m12">
+                    <table class="mdl-data-table mdl-data-table_full mdl-js-data-table mdl-shadow--4dp">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Establecimiento</th>
+                                <th>Propietario</th>
+                                <th>Num. contrato</th>
+                                <th>Opciones</th>
+                            </tr>
+                        </thead>
+                    
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Taller X</td>
+                                <td>Roberto Carlos</td>
+                                <td>00000001</td>
+                                <td>
+                                    <button class="btn"
+                                        ng-click=""><i class="material-icons left">edit</i>Edit</button>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+</div>
