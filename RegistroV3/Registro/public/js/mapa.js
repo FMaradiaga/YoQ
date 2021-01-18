@@ -66,7 +66,7 @@ function initMap() {
                // infoWindow.setPosition(pos);
                // infoWindow.setContent("<label class='black-text'> Ubicación encontrada <br />Lat : " + position.coords.latitude + " </br>Lang :" + position.coords.longitude + '</label>');
                 map.panTo(pos);
-                $("input#vcomer_coord").val(JSON.stringify(mapsMouseEvent.pos.toJSON(), null, 2));
+              //      $("input#vcomer_coord").val(pos.toJSON());
 
                 marker = new google.maps.Marker({
                     position: pos,
