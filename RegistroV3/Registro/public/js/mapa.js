@@ -61,11 +61,12 @@ function initMap() {
     $("#find_btn").click(function () {
         if ("geolocation" in navigator) {
             navigator.geolocation.getCurrentPosition(function (position) {
-                infoWindow = new google.maps.InfoWindow({ map: map });
+              //  infoWindow = new google.maps.InfoWindow({ map: map });
                 let pos = { lat: position.coords.latitude, lng: position.coords.longitude };
-                infoWindow.setPosition(pos);
+               // infoWindow.setPosition(pos);
                // infoWindow.setContent("<label class='black-text'> Ubicación encontrada <br />Lat : " + position.coords.latitude + " </br>Lang :" + position.coords.longitude + '</label>');
                 map.panTo(pos);
+                $("input#vcomer_coord").val(JSON.stringify(mapsMouseEvent.pos.toJSON(), null, 2));
 
                 marker = new google.maps.Marker({
                     position: pos,
