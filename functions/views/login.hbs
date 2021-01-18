@@ -13,17 +13,19 @@
     <img class="wave" src="img/wave.png">
     <div class="container">
         <div class="img">
-           
+            <p id="icon" < id="icon"
+                style="text-shadow: rgb(27, 116, 108) 0px 0px 0px, rgb(28, 120, 112) 1px 1px 0px, rgb(29, 125, 116) 2px 2px 0px, rgb(29, 129, 119) 3px 3px 0px, rgb(30, 133, 123) 4px 4px 0px, rgb(31, 137, 127) 5px 5px 0px, rgb(32, 141, 131) 6px 6px 0px, rgb(33, 145, 135) 7px 7px 0px, rgb(34, 149, 139) 8px 8px 0px, rgb(35, 154, 142) 9px 9px 0px, rgb(36, 158, 146) 10px 10px 0px, rgb(37, 162, 150) 11px 11px 0px; font-size: 42px; color: rgb(255, 255, 255); height: 91px; width: 450px; line-height: 91px; border-radius: 16%; text-align: center; background-color: rgb(38, 166, 154);">
+                COSERIN S. DE R. L. </p>
         </div>
         <div class="login-content">
-            <form action="/" method="post">
-                <img src="img/avatar.svg">               
+            <form id="frm_login" method="">
+                <img src="img/avatar.svg">
                 <div class="input-div one">
                     <div class="i">
                         <i class="fas fa-user"></i>
                     </div>
                     <div class="div">
-                        <input id="vuser" type="text" class="input" placeholder="Usuario">
+                        <input id="vuser" type="text" class="input" placeholder="correo" value="botteripa@gmail.com">
                     </div>
                 </div>
                 <div class="input-div one">
@@ -31,7 +33,7 @@
                         <i class="fas fa-user"></i>
                     </div>
                     <div class="div">
-                        <input id="iuser" type="text" class="input" placeholder="PIN">
+                        <input id="iuser" type="text" class="input" placeholder="PIN" value="8729">
                     </div>
                 </div>
                 <div class="input-div pass">
@@ -39,15 +41,18 @@
                         <i class="fas fa-lock"></i>
                     </div>
                     <div class="div">
-                        <input id="vpass" type="password" class="input">
+                        <input id="vpass" type="password" class="input" placeholder="Contraseña" value="123456">
                     </div>
                 </div>
-                <input type="submit" class="btn" value="Login" placeholder="Contraseña">
+                <button type="button" onclick="ingeso_auth()" class="btn">Login</button>
+                <a>BY DevTeam System</a>
+
             </form>
         </div>
     </div>
+
     <script type="text/javascript" src="/js/loginstyle.js"></script>
-    <script src="/login.js"></script>
+    <script type="text/javascript" src="/js/inicio.js"></script>
 </body>
 
 </html>

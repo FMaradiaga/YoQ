@@ -6,6 +6,120 @@
  * Made By MaterializeCSS.com
  */
 
+ :root{
+  --primary-color: #0D6FFA;
+  --text-color: rgba(0,0,0,0.65);
+  --light-color: #ffffff;
+  --elevation-1: 0px 1px 4px rgba(0, 0, 0, 0.08), 0px 1px 2px rgba(0, 0, 0, 0.12);
+  --elevation-2: 0px 2px 8px rgba(0, 0, 0, 0.08), 0px 2px 4px rgba(0, 0, 0, 0.12);
+  --elevation-3: 0px 3px 12px rgba(0, 0, 0, 0.08), 0px 3px 6px rgba(0, 0, 0, 0.12);
+}
+.as-container{
+ top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.as-choice-card{
+  position:relative;
+  display:flex;
+  
+  flex-direction: column;
+  align-items:center;
+  padding:72px 16px 32px 16px;
+  width: 480px;
+  
+  text-align: center;
+  box-shadow: var(--elevation-1);
+  background-color:#ffffff;
+  
+  cursor: pointer;
+}
+.as-choice-card *{
+  position:relative;
+  z-index:2;
+}
+.as-choice-card:after{
+  content: '';
+  position:absolute;
+  
+  top:0;
+  left:0;
+  width:4px;
+  height:100%;
+  
+  background-color:var(--primary-color);
+  transition: ease-in-out .3s;
+  z-index:0;
+}
+.as-card-icon{
+  position:absolute;
+  display:flex;
+  
+  justify-content:center;
+  align-items:center;
+  width:72px;
+  height:72px;
+  top: -36px;
+  
+  font-size: 25px;
+  color:var(--light-color);
+  background-color:var(--primary-color);
+  border-radius:50%;
+  box-shadow: var(--elevation-2);
+  transition: ease-in-out .3s;
+}
+.as-card-title,
+.as-card-info{
+  transition:ease-in-out .3s;
+}
+.as-card-info{
+  width: 403px;;
+  padding-bottom:32px;
+  margin:0;
+}
+.as-card-cta{
+  padding: 12px 36px;
+  
+  border-radius:30px;
+  border:none;
+  background-color: var(--primary-color);
+  color: teal;
+  box-shadow: var(--elevation-3);
+  transition: ease-in-out .3s;
+}
+.as-choice-card:hover{
+  --text-color: #FFFFFF;
+  --primary-color: #ffffff;
+  --light-color: #0D6FFA;
+  
+  color: var(--text-color);
+}
+.as-choice-card:hover:after{
+  --primary-color: #0D6FFA;
+  
+  width:100%;
+}
+
+ .main-loader {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
 .icon-block {
   padding: 0 15px;
 }

@@ -12,10 +12,10 @@ admin.initializeApp({
 });
 
 
-const app = express();
+
+const app = express();//peticiones
 
 //settins
-
 app.engine( 'hbs', exphbs( { 
     extname: '.hbs', 
     defaultLayout: 'main', 
@@ -26,13 +26,15 @@ app.engine( 'hbs', exphbs( {
 app.set('views', './views');
 app.set('view engine' , 'hbs');
 
-
-
 //routes
 
-const consultas = require('./routes/consultas');
+const consultas_get = require('./routes/consultas_get');
+const consultas_post = require('./routes/consultas_post');
+const paginas = require('./routes/paginas');
 
-app.use(consultas.router);
+app.use(consultas_get.consultas_get);
+app.use(consultas_post.consultas_post);
+app.use(paginas.paginas);
 
 exports.app = functions.https.onRequest(app);
 

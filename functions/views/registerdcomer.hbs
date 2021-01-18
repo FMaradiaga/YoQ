@@ -1,4 +1,11 @@
 {{>header}}
+
+
+
+
+
+
+
 <div class="main">
     <div class="section">
         <div class="main">
@@ -6,14 +13,19 @@
                 <div class=" col s12 m12">
                     <div class="">
                         <a href="/dash" class="teal-text">Inicio ></a>
-                        <a href="/registercomer" class="teal-text">Agregar ></a>
-                        <b href="#!" class="teal-text"><b>Registro</b></a></div>
+                        <a href="/1002" class="teal-text">Agregar ></a>
+                        <b href="#!" class="teal-text"><b>Registro</b></a>
+                    </div>
                 </div>
             </div>
-            <div class="row">
 
+            <div class="row">
                 <div class="col s12 m12">
                     <div class="card">
+                        <div class="right">
+                            Codigo:
+                            <input type="text" name="vcomer_id" id="vcomer_id" disabled class="validate">
+                        </div>
                         <div class="card-content white-text">
                             <!-- HORIZONTAL STEPPER -->
                             <div class="col-md-12">
@@ -35,7 +47,7 @@
                                         </div>
                                         <div id="stepper3" class="mdl-stepper-step">
                                             <div class="mdl-stepper-circle"><span>3</span></div>
-                                            <div class="mdl-stepper-title">Propietario</div>
+                                            <div class="mdl-stepper-title">Finalizar</div>
                                             <div class="mdl-stepper-bar-left"></div>
                                             <div class="mdl-stepper-bar-right"></div>
                                         </div>
@@ -45,166 +57,295 @@
                             <!-- end HORIZONTAL STEPPER -->
 
                             <!-- STEPS -->
-                            <div class="stepper">
-                                <div id="step1" class="step">
-                                    <div class="row">
-                                        <form class="col s12">
+                            <divclass="stepper">
+                                <form id="addComercioDg" method="post">
+                                    <input hidden type="text" id="vcomer_id" name="vcomer_id" class="validate">
+                                    <div id="step1" class="step">
+                                        <div class="row">
                                             <div class="row">
-                                                <div class="input-field col s6">
-                                                    <input placeholder="Nombre" id="com_sname" type="text"
+                                                <div class="center input-field col s12">
+                                                    <div class="teal-text subheader">Datos Generales</div>
+                                                    <div class="divider"></div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="input-field col s4">
+                                                    <input name="icomer_employe" type="text" class="validate">
+                                                    <label for="icomer_employe">Numero Empleados</label>
+                                                </div>
+                                                <div class="input-field col s4">
+                                                    <select id="icomer_cat" name="icomer_cat" class="browser-default">
+                                                    </select>
+                                                </div>
+                                                <div class="input-field col s4">
+                                                    <input placeholder="2773-14-32" name="icomer_phone" type="text"
                                                         class="validate">
-                                                    <label for="com_sname">Nombre</label>
+                                                    <label for="icomer_phone">Teléfono</label>
+                                                </div>
+                                                <div class="input-field col s4">
+                                                    <input placeholder="504-12345678" name="icomer_celphone" type="text"
+                                                        class="validate">
+                                                    <label for="icomer_celphone">Celular</label>
+                                                </div>
+                                                <div class="input-field col s4">
+                                                    <input name="vcomer_email" type="email" class="validate">
+                                                    <label for="vcomer_email">Correo</label>
+                                                </div>
+                                                <div class="input-field col s6">
+                                                    <input placeholder="" name="vcomer_encargado" type="text"
+                                                        class="validate">
+                                                    <label for="vcomer_encargado">Nombre de Encargado</label>
                                                 </div>
                                                 <div class="input-field col s3">
-                                                    <input id="com_iemployee" type="text" class="validate">
-                                                    <label for="com_iemployee">Numero Empleados</label>
+                                                    <input name="icomer_ecelphone" type="text" class="validate">
+                                                    <label for="icomer_ecelphone">Celular de Encargado</label>
                                                 </div>
-                                                <div class="input-field col s3">
-                                                    <select id="com_sdepto" class="browser-default">
-                                                        <option value="">Seleccione Categoría<a href=""></a></option>
+
+                                                <div class="row">
+                                                    <div class="center input-field col s12">
+                                                        <div class="teal-text subheader">Redes Sociales</div>
+                                                        <div class="divider"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="input-field col s4">
+                                                    <input placeholder="www.ejemplo.com" name="vcomer_web" type="text"
+                                                        class="validate">
+                                                    <label for="vcomer_web">Pagina WEB</label>
+                                                </div>
+                                                <div class="input-field col s2">
+                                                    <label>
+                                                        <input name="bcomer_facebook" type="checkbox" />
+                                                        <span>Facebook</span>
+                                                    </label>
+                                                </div>
+                                                <div class="input-field col s2">
+                                                    <label>
+                                                        <input name="bcomer_instagram" type="checkbox" />
+                                                        <span>Instagram</span>
+                                                    </label>
+                                                </div>
+
+                                                <div class="input-field col s2">
+                                                    <label>
+                                                        <input name="bcomer_product" type="checkbox" />
+                                                        <span>Productos</span>
+                                                    </label>
+                                                </div>
+                                                <div class="input-field col s2">
+                                                    <label>
+                                                        <input name="bcomer_services" type="checkbox" />
+                                                        <span>Servicios</span>
+                                                    </label>
+                                                </div>
+
+                                            </div>
+                                            <div class="row">
+                                                <div class="center input-field col s12">
+                                                    <div class="teal-text subheader">Horario de atención</div>
+                                                    <div class="divider"></div>
+                                                </div>
+                                            </div>
+                                            <div class="">
+                                                <div class="row">
+                                                    <div class=" col s2"><label class="orange-text">Lunes</label>
+                                                        <input name="vcomer_laper" type="text" class="timepicker"
+                                                            value="08:00 AM">
+                                                        <input name="vcomer_lcier" type="text" class="timepicker"
+                                                            value="06:00 PM">
+                                                    </div>
+                                                    <div class="orange-text  col s2"><label
+                                                            class="orange-text">Martes</label>
+                                                        <input name="vcomer_maper" type="text" class="timepicker"
+                                                            value="08:00 AM">
+                                                        <input name="vcomer_mcier" type="text" class="timepicker"
+                                                            value="06:00 PM">
+                                                    </div>
+                                                    <div class="orange-text col s2"><label
+                                                            class="orange-text">Miercoles</label>
+                                                        <input name="vcomer_miaper" type="text" class="timepicker"
+                                                            value="08:00 AM">
+                                                        <input name="vcomer_micier" type="text" class="timepicker"
+                                                            value="06:00 PM">
+                                                    </div>
+                                                    <div class="orange-text col s2"><label
+                                                            class="orange-text">Jueves</label>
+                                                        <input name="vcomer_japer" type="text" class="timepicker"
+                                                            value="08:00 AM">
+                                                        <input name="vcomer_jcier" type="text" class="timepicker"
+                                                            value="06:00 PM">
+                                                    </div>
+                                                    <div class="orange-text col s2"><label
+                                                            class="orange-text">Viernes</label>
+                                                        <input name="vcomer_vaper" type="text" class="timepicker"
+                                                            value="08:00 AM">
+                                                        <input name="vcomer_vcier" type="text" class="timepicker"
+                                                            value="06:00 PM">
+                                                    </div>
+                                                    <div class="orange-text col s1"><label
+                                                            class="orange-text">Sabado</label>
+                                                        <input name="vcomer_saper" type="text" class="timepicker"
+                                                            value="08:00 AM">
+                                                        <input name="vcomer_scier" type="text" class="timepicker"
+                                                            value="12:00 PM">
+                                                    </div>
+                                                    <div class="orange-text col s1"><label
+                                                            class="orange-text">Domingo</label>
+                                                        <input name="vcomer_daper" type="text" class="timepicker">
+                                                        <input name="vcomer_dcier" type="text" class="timepicker">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a id="next1" class="waves-effect waves-light btn"><i
+                                                    class="material-icons right">keyboard_arrow_right</i>SIGUIENTE</a>
+                                        </div>
+
+
+                                    </div>
+                                    <div id="step2" class="step hide">
+                                        <div class="row">
+                                            <div class="col s6">
+                                                <div class="input-field col s4">
+                                                    <select name="vcom_depto" class="browser-default">
+                                                        <option value="">Seleccione Departamento</option>
+                                                        <option selected value="1">Comayagua</option>
+                                                    </select>
+                                                </div>
+                                                <div class="input-field col s4">
+                                                    <select name="vcomer_ciudad" class="browser-default">
+                                                        <option value="">Seleccione Ciudad</option>
+                                                        <option selected value="1">Siguatepeque</option>
+                                                    </select>
+                                                </div>
+                                                <div class="input-field col s4">
+                                                    <select name="vcomer_barrio" class="browser-default">
+                                                        <option value="">Seleccione Barrio</option>
                                                         <option value="1">Option 1</option>
                                                         <option value="2">Option 2</option>
                                                         <option value="3">Option 3</option>
                                                     </select>
                                                 </div>
                                                 <div class="input-field col s4">
-                                                    <input placeholder="2773-14-32" id="com_sphone" type="text"
-                                                        class="validate">
-                                                    <label for="com_sphone">Teléfono</label>
+                                                    <select name="vcomer_urbrur" class="browser-default">
+                                                        <option value="">Urbano/Rural</option>
+                                                        <option value="1">Urbano</option>
+                                                        <option value="2">Rural</option>
+                                                    </select>
                                                 </div>
-                                                <div class="input-field col s4">
-                                                    <input placeholder="504-12345678" id="com_sphone" type="text" class="validate">
-                                                    <label for="com_sphone">Celular</label>
+                                                <div class="input-field col s12">
+                                                    <input disabled name="vcomer_coord" id="vcomer_coord" type="text" class="validate">
+                                                <a class="btn" id="find_btn">Encontrarme</a>
                                                 </div>
-                                                <div class="input-field col s4">
-                                                    <input id="com_semail" type="email" class="validate">
-                                                    <label for="com_semail">Correo</label>
+                                                <div class="input-field col s12">
+                                                    <textarea name="vcomer_dir" id="textarea1"
+                                                        class="materialize-textarea"></textarea>
+                                                    <label for="textarea1">Dirección</label>
                                                 </div>
-                                                <div class="input-field col s4">
-                                                    <input placeholder="www.ejemplo.com" id="com_sphone" type="text" class="validate">
-                                                    <label for="com_sphone">Pagina WEB</label>
-                                                </div>
-                                                <div class="input-field col s2">
-                                                    <label>
-                                                        <input type="checkbox" />
-                                                        <span>Facebook</span>
-                                                    </label>
-                                                </div>
-                                                <div class="input-field col s2">
-                                                    <label>
-                                                        <input type="checkbox" />
-                                                        <span>Instagram</span>
-                                                    </label>
-                                                </div>
-                                               
-                                                <div class="input-field col s2">
-                                                    <label>
-                                                        <input type="checkbox" />
-                                                        <span>Productos</span>
-                                                    </label>
-                                                </div>
-                                                <div class="input-field col s2">
-                                                    <label>
-                                                        <input type="checkbox" />
-                                                        <span>Servicios</span>
-                                                    </label>
-                                                </div>
-
                                             </div>
-                                        </form>
+                                            <div class="col s6">
+                                                <div id="map" class="col s12" style="height: 400px;"></div>
+                                            </div>
+
+
+                                        </div>
+                                        <a id="previous2" class="waves-effect waves-light btn"><i
+                                                class="material-icons left">keyboard_arrow_left</i>ANTERIOR</a>
+                                        <a id="next2" class="waves-effect waves-light btn"><i
+                                                class="material-icons right">keyboard_arrow_right</i>SIGUIENTE</a>
                                     </div>
-                                    <a id="next1" class="waves-effect waves-light btn"><i
-                                            class="material-icons right">keyboard_arrow_right</i>SIGUIENTE</a>
-
-                                </div>  
-                                <div id="step2" class="step hide">
-                                    <div class="row">
-                                        <div class="col s6">
-                                            <div class="input-field col s4">
-                                                <select id="com_sdepto" class="browser-default">
-                                                    <option value="">Seleccione Departamento</option>
-                                                    <option selected value="1">Comayagua</option>
-                                                </select>
-                                            </div>
-                                            <div class="input-field col s4">
-                                                <select id="com_sdepto" class="browser-default">
-                                                    <option value="">Seleccione Ciudad</option>
-                                                    <option selected value="1">Siguatepeque</option>
-                                                </select>
-                                            </div>
-                                            <div class="input-field col s4">
-                                                <select id="com_sdepto" class="browser-default">
-                                                    <option value="">Seleccione Barrio</option>
-                                                    <option value="1">Option 1</option>
-                                                    <option value="2">Option 2</option>
-                                                    <option value="3">Option 3</option>
-                                                </select>
-                                            </div>
-                                            <div class="input-field col s4">
-                                                <select id="com_sdepto" class="browser-default">
-                                                    <option value="">Urbano/Rural</option>
-                                                    <option value="1">Urbano</option>
-                                                    <option value="2">Rural</option>
-                                                </select>
-                                            </div>
-                                            <div class="input-field col s4">
-                                                <input disabled id="com_iemployee" type="text" class="validate">
-                                                <label for="com_iemployee">Coordenadas</label>
-                                            </div>
+                                    <div id="step3" class="step hide">
+                                        <div class="row">
                                             <div class="input-field col s12">
-                                                <textarea id="textarea1" class="materialize-textarea"></textarea>
-                                                <label for="textarea1">Dirección</label>
+                                                <label>Observaciones</label>
+                                                <input name="vcomer_observ" type="text" class="validate">
+                                            </div>
+                                            <div class="input-field col s6">
+                                                <dic name="vcomer_tagsdg" id="vcomer_tagsdg" class="chips"></dic>
+
+                                            </div>
+                                            <div class="input-field col s6">
+                                                <label>
+                                                    <input name="vcomer_notify" type="checkbox" />
+                                                    <span>Recibir notificacion.</span>
+                                                </label>
                                             </div>
                                         </div>
-                                        <div class="col s6">
-                                            <div class="col s12"
-                                                style="background-color: grey; width:100%; height: 400px;"></div>
-                                        </div>
-
-
-                                    </div>
-                                    <a id="previous2" class="waves-effect waves-light btn"><i
-                                            class="material-icons left">keyboard_arrow_left</i>ANTERIOR</a>
-                                    <a id="next2" class="waves-effect waves-light btn"><i
-                                            class="material-icons right">keyboard_arrow_right</i>SIGUIENTE</a>
-                                </div>
-                                <div id="step3" class="step hide">
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <label>Observaciones</label>
-                                            <input type="text" class="validate">
-                                        </div>
-                                        <div class="input-field col s6">
-                                            <div class="chips chips-placeholder"></div>
+                                        <div class="file-field input-field">
+                                            <div class="btn">
+                                                <span>Foto</span>
+                                                <input name="vcomer_photo" type="file" multiple>
+                                            </div>
+                                            <div class="file-path-wrapper">
+                                                <input class="file-path validate" type="text"
+                                                    placeholder="Cargar Foto del Negocio">
+                                            </div>
 
                                         </div>
-                                        <div class="input-field col s6">
-                                            <label>
-                                                <input type="checkbox" />
-                                                <span>Recibir notificacion.</span>
-                                            </label>
-                                        </div>
+                                        <a id="previous3" class="waves-effect waves-light btn"><i
+                                                class="material-icons left">keyboard_arrow_left</i>ANTERIOR</a>
+                                        <button id="btn_submit" type="submit" id="finish"
+                                            class="waves-effect waves-light btn"><i
+                                                class="material-icons right">done_all</i>VALIDAR</button>
                                     </div>
-                                    <div class="file-field input-field">
-                                        <div class="btn">
-                                            <span>Foto</span>
-                                            <input type="file" multiple>
-                                        </div>
-                                        <div class="file-path-wrapper">
-                                            <input class="file-path validate" type="text"
-                                                placeholder="Cargar Foto del Negocio">
-                                        </div>
-                                    </div>
-                                    <a id="previous3" class="waves-effect waves-light btn"><i
-                                            class="material-icons left">keyboard_arrow_left</i>ANTERIOR</a>
-                                    <a id="finish" class="waves-effect waves-light btn"><i
-                                            class="material-icons right">done_all</i>VALIDAR</a>
-                                </div>
-                            </div>
+                                </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
+
+
+<!-- Placeholder for the Google Map -->
+<div id="map" style="height: 512px;">
+    <noscript>
+        <!-- http://code.google.com/apis/maps/documentation/staticmaps/ -->
+        <img
+            src="http://maps.google.com/maps/api/staticmap?center=1%20infinite%20loop%20cupertino%20ca%2095014&amp;zoom=16&amp;size=512x512&amp;maptype=roadmap&amp;sensor=false" />
+    </noscript>
+</div>
+
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript">
+
+    // Define the address we want to map.
+    var address = "1 infinite loop cupertino ca 95014";
+
+    // Create a new Geocoder
+    var geocoder = new google.maps.Geocoder();
+
+    // Locate the address using the Geocoder.
+    geocoder.geocode({ "address": address }, function (results, status) {
+
+        // If the Geocoding was successful
+        if (status == google.maps.GeocoderStatus.OK) {
+
+            // Create a Google Map at the latitude/longitude returned by the Geocoder.
+            var myOptions = {
+                zoom: 16,
+                center: results[0].geometry.location,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById("map"), myOptions);
+
+            // Add a marker at the address.
+            var marker = new google.maps.Marker({
+                map: map,
+                position: results[0].geometry.location
+            });
+
+        } else {
+            try {
+                console.error("Geocode was not successful for the following reason: " + status);
+            } catch (e) { }
+        }
+    });
+</script>
+
+</div>  
+<script type="text/javascript" src="/assets/jquery.js"></script>
+<script type="text/javascript" src="/js/adddcomer.js"></script>
+<script type="text/javascript" src="/js/mapa.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1FagaVUKZ2J0dVLpLZPRYwakAcnmwGUw&callback=initMap"></script>
+{{>footer}}
+
+<script type="text/javascript" src="/assets/observador.js"></script>

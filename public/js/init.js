@@ -1,6 +1,15 @@
 (function ($) {
   $(function () {
+    
 
+    $('#modal1').modal({ backdrop: 'static', keyboard: false })
+
+    $(document).ready(function () {
+      $('.modal').modal();
+    });
+    $(document).ready(function () {
+      $('.timepicker').timepicker();
+    });
     // Or with jQuery
 
     $('.dropdown-trigger').dropdown();
