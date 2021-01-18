@@ -1,0 +1,295 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+
+ /* Set the size of the div element that contains the map */
+#map {
+  width:100%; 
+  height: 400px;
+  /* The width is the width of the web page */
+}
+
+ /*Modal despues de guardar la información*/
+ :root{
+  --primary-color: #26a69a;
+  --text-color: rgba(0,0,0,0.65);
+  --light-color: #ffffff;
+  --elevation-1: 0px 1px 4px rgba(0, 0, 0, 0.08), 0px 1px 2px rgba(0, 0, 0, 0.12);
+  --elevation-2: 0px 2px 8px rgba(0, 0, 0, 0.08), 0px 2px 4px rgba(0, 0, 0, 0.12);
+  --elevation-3: 0px 3px 12px rgba(0, 0, 0, 0.08), 0px 3px 6px rgba(0, 0, 0, 0.12);
+}
+.as-container{
+ top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+.as-choice-card{
+  position:relative;
+  display:flex;
+  
+  flex-direction: column;
+  align-items:center;
+  padding:72px 16px 32px 16px;
+  width: 480px;
+  
+  text-align: center;
+  box-shadow: var(--elevation-1);
+  background-color:#ffffff;
+  
+  cursor: pointer;
+}
+.as-choice-card *{
+  position:relative;
+  z-index:2;
+}
+.as-choice-card:after{
+  content: '';
+  position:absolute;
+  
+  top:0;
+  left:0;
+  width:4px;
+  height:100%;
+  
+  background-color: #26a69a;;
+  transition: ease-in-out .3s;
+  z-index:0;
+}
+.as-card-icon{
+  position:absolute;
+  display:flex;
+  
+  justify-content:center;
+  align-items:center;
+  width:72px;
+  height:72px;
+  top: -36px;
+  
+  font-size: 25px;
+  color:var(--light-color);
+  background-color:var(--primary-color);
+  border-radius:50%;
+  box-shadow: var(--elevation-2);
+  transition: ease-in-out .3s;
+}
+.as-card-title,
+.as-card-info{
+  transition:ease-in-out .3s;
+}
+.as-card-info{
+  width: 403px;;
+  padding-bottom:32px;
+  margin:0;
+}
+.as-card-cta{
+  padding: 12px 36px;
+  
+  border-radius:30px;
+  border:none;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  box-shadow: var(--elevation-3);
+  transition: ease-in-out .3s;
+}
+.as-choice-card:hover{
+  --text-color: #FFFFFF;
+  --primary-color: #ffffff;
+  --light-color: #0D6FFA;
+  
+  color: var(--text-color);
+}
+.as-choice-card:hover:after{
+  --primary-color: #0D6FFA;
+  
+  width:100%;
+}
+
+
+/*Preloader al momento de guyardar*/ 
+ .main-loader {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+
+.stepper .body {    
+	padding-bottom: 28px;
+  padding-top: 8px;
+}
+
+/* Simple setup for this demo */
+
+.mdl-card {
+  width: 550px;
+  min-height: 0;
+  margin: 0 auto;
+}
+
+.mdl-card__supporting-text {
+  width: 100%;
+  padding: 0;
+}
+
+.mdl-stepper-horizontal-alternative .mdl-stepper-step {
+  width: 25%;
+  /* 100 / no_of_steps */
+}
+
+
+/* Begin actual mdl-stepper css styles */
+
+.mdl-stepper-horizontal-alternative {
+  display: table;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.mdl-stepper-horizontal-alternative .mdl-stepper-step {
+  display: table-cell;
+  position: relative;
+  padding: -5px;
+}
+
+.mdl-stepper-horizontal-alternative .mdl-stepper-step:hover,
+.mdl-stepper-horizontal-alternative .mdl-stepper-step:active {
+  background-color: rgba(0, 0, 0, .06);
+}
+
+.mdl-stepper-horizontal-alternative .mdl-stepper-step:active {
+  border-radius: 15% / 75%;
+}
+
+.mdl-stepper-horizontal-alternative .mdl-stepper-step:first-child:active {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.mdl-stepper-horizontal-alternative .mdl-stepper-step:last-child:active {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.mdl-stepper-horizontal-alternative .mdl-stepper-step:hover .mdl-stepper-circle {
+  background-color: #757575;
+}
+
+.mdl-stepper-horizontal-alternative .mdl-stepper-step:first-child .mdl-stepper-bar-left,
+.mdl-stepper-horizontal-alternative .mdl-stepper-step:last-child .mdl-stepper-bar-right {
+  display: none;
+}
+
+.mdl-stepper-horizontal-alternative .mdl-stepper-step .mdl-stepper-circle {
+  width: 24px;
+  height: 24px;
+  margin: 0 auto;
+  background-color: #9E9E9E;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 2em;
+  font-size: 12px;
+  color: white;
+}
+
+.mdl-stepper-horizontal-alternative .mdl-stepper-step.active-step .mdl-stepper-circle {
+  background-color: rgb(33, 150, 243);
+}
+
+.mdl-stepper-horizontal-alternative .mdl-stepper-step.step-done .mdl-stepper-circle:before {
+  content: "\2714";
+}
+
+.mdl-stepper-horizontal-alternative .mdl-stepper-step.step-done .mdl-stepper-circle *,
+.mdl-stepper-horizontal-alternative .mdl-stepper-step.editable-step .mdl-stepper-circle * {
+  display: none;
+}
+
+.mdl-stepper-horizontal-alternative .mdl-stepper-step.editable-step .mdl-stepper-circle {
+  -moz-transform: scaleX(-1);
+  /* Gecko */
+  -o-transform: scaleX(-1);
+  /* Opera */
+  -webkit-transform: scaleX(-1);
+  /* Webkit */
+  transform: scaleX(-1);
+  /* Standard */
+}
+
+.mdl-stepper-horizontal-alternative .mdl-stepper-step.editable-step .mdl-stepper-circle:before {
+  content: "\270E";
+}
+
+.mdl-stepper-horizontal-alternative .mdl-stepper-step .mdl-stepper-title {
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.mdl-stepper-horizontal-alternative .mdl-stepper-step .mdl-stepper-title,
+.mdl-stepper-horizontal-alternative .mdl-stepper-step .mdl-stepper-optional {
+  text-align: center;
+  color: rgba(0, 0, 0, .26);
+}
+
+.mdl-stepper-horizontal-alternative .mdl-stepper-step.active-step .mdl-stepper-title {
+  font-weight: 500;
+  color: rgba(0, 0, 0, .87);
+}
+
+.mdl-stepper-horizontal-alternative .mdl-stepper-step.active-step.step-done .mdl-stepper-title,
+.mdl-stepper-horizontal-alternative .mdl-stepper-step.active-step.editable-step .mdl-stepper-title {
+  font-weight: 300;
+}
+
+.mdl-stepper-horizontal-alternative .mdl-stepper-step .mdl-stepper-optional {
+  font-size: 12px;
+}
+
+.mdl-stepper-horizontal-alternative .mdl-stepper-step.active-step .mdl-stepper-optional {
+  color: rgba(0, 0, 0, .54);
+}
+
+.mdl-stepper-horizontal-alternative .mdl-stepper-step .mdl-stepper-bar-left,
+.mdl-stepper-horizontal-alternative .mdl-stepper-step .mdl-stepper-bar-right {
+  position: absolute;
+  top: 36px;
+  height: 1px;
+  border-top: 1px solid #BDBDBD;
+}
+
+.mdl-stepper-horizontal-alternative .mdl-stepper-step .mdl-stepper-bar-right {
+  right: 0;
+  left: 50%;
+  margin-left: 20px;
+}
+
+.mdl-stepper-horizontal-alternative .mdl-stepper-step .mdl-stepper-bar-left {
+  left: 0;
+  right: 50%;
+  margin-right: 20px;
+}
